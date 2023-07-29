@@ -1,19 +1,25 @@
 import { Route, Routes } from "react-router-dom";
-import './App.css';
-import Home from "./components/Home/Home";
+import "./App.css";
+
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
-
+import Shoes from "./components/Pages/Shoes/Shoes";
+import Shirts from "./components/Pages/Shirts/Shirts";
+import Shorts from "./components/Pages/Shorts/Shorts";
 
 function App() {
- 
   return (
     <div className="App">
-      <Header/>
-      <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/stock/:id" element={<h1>Stoks</h1>}></Route>
-      </Routes>
+      <Header />
+      <main className="main">
+        <Routes>
+          <Route path="/" element={<Shorts />}></Route>
+          <Route path="/shoes" element={<Shoes />}></Route>
+          <Route path="/shirts" element={<Shirts />}></Route>
+        </Routes>
+        <Footer />
+      </main>
     </div>
   );
 }
