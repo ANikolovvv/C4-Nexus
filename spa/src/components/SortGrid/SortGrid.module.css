@@ -1,0 +1,63 @@
+.sorting_container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    gap: 20px;
+  }
+  
+
+  .sorting_container label {
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    color: #333;
+  }
+  
+
+  .sorting_container select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #10858f;
+    background-color: #f7f7f7;
+    color: #259aa9;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .sorting_container select:hover {
+    border-color: #fffdfd;
+  }
+  
+  .sorting_container select:focus {
+    border-color: #eceff1;
+    box-shadow: 2px 4px 8px rgba(46, 133, 240, 0.4);
+  }
+  
+  
+  .sorting_container select::-ms-expand {
+    display: none;
+  }
+  
+  .sorting_container select::before {
+    content: '\f078';
+    font-family: FontAwesome;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #555555;
+  }
+  
+ 
+  .sorting_container select:hover::before {
+    color: #00ffea;
+  }
+  
+  .sorting_container select:focus::before {
+    color: #00ffe1;
+  }
