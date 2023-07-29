@@ -1,57 +1,41 @@
+import { filteredData } from "../../utils/helpers";
 import styles from "./FilterForm.module.css";
 import React, { useState } from "react";
 
-const FilterForm = ({ onFilter }) => {
-  const [price, setPrice] = useState("");
-  const [rating, setRating] = useState("");
+const FilterForm = ({ data, onFilter }) => {
+  const [selectedOption, setSelectedOption] = useState("");
 
-  const handlePriceChange = (e) => {
-    setPrice(e.target.value);
+  const handleOptionChange = (event) => {
+    const selectedOption = event.target.value;
+    setSelectedOption(selectedOption);
+    applyFilter(selectedOption);
   };
 
-  const handleRatingChange = (e) => {
-    setRating(e.target.value);
-  };
+  const applyFilter = (selectedOption) => {
+    const [selectedColor, selectedPrice] = selectedOption.split("|");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onFilter({ price, rating });
-    setPrice("");
-    setRating("");
+    let filtered = filteredData(data, selectedColor, selectedPrice);
+    onFilter(filtered);
   };
 
   return (
     <>
-      <form onSubmit={handleSubmit} className={[styles.form_container]}>
-        <h1 className={[styles.box_title]}>Filter Form</h1>
-        <div>
-          <label className={[styles.form_label]}>
-            Price:
-            <input
-              className={[styles.form_input]}
-              type="number"
-              value={price}
-              onChange={handlePriceChange}
-            />
-          </label>
-        </div>
-        <div>
-          <label className={[styles.form_label]}>
-            Rating:
-            <input
-              type="number"
-              value={rating}
-              className={[styles.form_input]}
-              onChange={handleRatingChange}
-            />
-          </label>
-        </div>
-        <div>
-          <button className={[styles.form_btn]} type="submit">
-            Apply Filter
-          </button>
-        </div>
-      </form>
+      <div className={styles.filter_container}>
+        <h3 className={styles.title_filter}>Filter</h3>
+        <select
+          className={styles.select}
+          value={selectedOption}
+          onChange={handleOptionChange}
+        >
+          <option value="">All Colors and Prices</option>
+          <option value="|">All Colors</option>
+          {data.map((item) => (
+            <option key={item.image} value={`${item.color}|${item.price}`}>
+              {item.color} - ${item.price}
+            </option>
+          ))}
+        </select>
+      </div>
     </>
   );
 };
