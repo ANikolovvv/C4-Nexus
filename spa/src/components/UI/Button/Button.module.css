@@ -1,0 +1,24 @@
+.load_box{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.load_btn {
+ align-items: center;
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.load_btn:hover {
+  background-color: #0056b3;
+}
