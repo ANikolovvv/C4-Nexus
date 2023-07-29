@@ -1,21 +1,22 @@
-import styles from "./SortGrid.module.css";
+import styles from "../FilterForm/FilterForm.module.css";
 import React, { useState } from "react";
 
-const SortGrid = () => {
-  const handleSortChange = (event) => {};
+const SortGrid = ({ onSearch }) => {
+  const handleSortChange = (event) => {
+    const selectedOptions = Array.from(event.target.selectedOptions);
+    const selectedValues = selectedOptions.map((option) => option.value);
+    onSearch(selectedValues);
+  };
 
   return (
-    <div>
-      <div className={[styles.sorting_container]}>
-        <label htmlFor="sorting">Sort by:</label>
-        <select id="sorting" name="sorting" onChange={handleSortChange}>
-          <option value="default">Default</option>
-          <option value="alphabeticalA-Z">Alphabetical a-z</option>
-          <option value="AlphabeticalZ-A">Alphabetical z-a</option>
-          <option value="PriceAscending">Price ascending</option>
-          <option value="Price descending">Price descending</option>
-        </select>
-      </div>
+    <div className={styles.filter_container}>
+      <h3 className={styles.title_filter}>Sort by</h3>
+      <select  className={styles.select}  name="sorting" onChange={handleSortChange}>
+        <option value="alphabeticalA-Z">Alphabetical a-z</option>
+        <option value="AlphabeticalZ-A">Alphabetical z-a</option>
+        <option value="PriceAscending">Price ascending</option>
+        <option value="Price descending">Price descending</option>
+      </select>
     </div>
   );
 };
