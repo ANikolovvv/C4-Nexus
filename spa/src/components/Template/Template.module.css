@@ -1,0 +1,23 @@
+.header_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 20px;
+}
+.title_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+.cards_box {
+  min-height: 580px;
+  display: grid;
+  grid-template-columns: repeat(4, 350px);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
