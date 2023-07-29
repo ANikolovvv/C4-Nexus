@@ -1,0 +1,152 @@
+{
+  "shorts": [
+    {
+      "id": 1,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/156762-0-Dickies-SlimWorkshortFlex.jpg",
+      "name": "ComfortFit Shorts",
+      "price": 29.99,
+      "rating": 4.5,
+      "description": "Stay comfortable and stylish with these lightweight shorts."
+    },
+    {
+      "id": 2,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/158054-0-Antix-SlackCarpenter.jpg",
+      "name": "ActiveGrip Shorts",
+      "price": 34.99,
+      "rating": 4.2,
+      "description": "Designed for your active lifestyle, these shorts offer enhanced grip and flexibility."
+    },
+    {
+      "id": 3,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/160050-0-CarharttWIP-RegularCargoColumbia.jpg",
+      "name": "CoolBreeze Shorts",
+      "price": 25.99,
+      "rating": 4.8,
+      "description": "Keep cool during workouts with these breathable and moisture-wicking shorts."
+    },
+    {
+      "id": 4,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/161515-0-Volcom-OuterSpaced21.jpg",
+      "name": "Shorts",
+      "price": 27.99,
+      "rating": 3.8,
+      "description": "Keep cool during workouts."
+    },
+    {
+      "id": 5,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/160045-0-CarharttWIP-MasterDenison.jpg",
+      "name": "Master denison shorts teide rinsed",
+      "price": 33.99,
+      "rating": 4,
+      "description": "material:65% polyester, 35% cotton"
+    },
+    {
+      "id": 6,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/163875-0-skatedeluxe-Samurai.jpg",
+      "name": "Skatedeluxe Samurai Shorts",
+      "price": 38.99,
+      "rating": 5,
+      "description": "material:100% cotton"
+    }
+  ],
+  "shoes": [
+    {
+      "id": 1,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/140549-0-NikeSB-HeritageVulc.jpg",
+      "name": "Nike SB Heritage Vulc Shoe",
+      "price": 89.99,
+      "rating": 4.7,
+      "description": "Experience maximum comfort and support with our AirFlex technology."
+    },
+    {
+      "id": 2,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/159147-0-NikeSB-xKCDCDunkHighPro.jpg",
+      "name": "Nike SB x KCDC Dunk",
+      "price": 79.99,
+      "rating": 4.4,
+      "description": "Conquer any terrain with confidence in these durable hiking shoes."
+    },
+    {
+      "id": 3,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/157777-0-NikeSB-BlazerLowProGT.jpg",
+      "name": "Nike SB Blazer Low Pro GT",
+      "price": 79.99,
+      "rating": 5.6,
+      "description": "Perfect for everyday wear, these sneakers offer style and comfort."
+    },
+    {
+      "id": 4,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/166205-0-NikeSB-ZoomJanoskiOG.jpg",
+      "name": "Nike SB Zoom Janoski O",
+      "price": 84.99,
+      "rating": 7.6,
+      "description": "Perfect for everyday wear, these sneakers offer style and comfort."
+    },
+    {
+      "id": 5,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/159178-0-NikeSB-ZoomBlazerMidPremiumPlus.jpg",
+      "name": "Nike Black",
+      "price": 54.99,
+      "rating": 4.6,
+      "description": "Perfect for everyday wear, these sneakers offer style and comfort."
+    },
+    {
+      "id": 6,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/161160-0-NikeSB-IshodPremium.jpg",
+      "name": "Nike SB Zoom Janoski O",
+      "price": 84.99,
+      "rating": 6,
+      "description": "Perfect for everyday wear, these sneakers offer style and comfort."
+    }
+  ],
+  "t-shirts": [
+    {
+      "id": 1,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/162607-0-CarharttWIP-FiboOrganic.jpg",
+      "name": "Carhartt WIP Fibo Organic ",
+      "price": 19.99,
+      "rating": 4.3,
+      "description": "Show off your style with our eye-catching graphic print t-shirt."
+    },
+    {
+      "id": 2,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/122353-0-TheNorthFace-SimpleDome.jpg",
+      "name": "The North Face Simple Dome",
+      "price": 25.99,
+      "rating": 5.9,
+      "description": "A wardrobe staple,the North Face Simple Dome t-shirt offers a classic fit and comfort."
+    },
+    {
+      "id": 3,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/162686-0-Primitive-Legend.jpg",
+      "name": "Primitive Legend",
+      "price": 28.99,
+      "rating": 7.7,
+      "description": "Stay dry and cool during workouts with our performance Primitive Legend. "
+    },
+    {
+      "id": 4,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/162686-0-Primitive-Legend.jpg",
+      "name": "Butter Goods x The Smurf",
+      "price": 28.99,
+      "rating": 5.7,
+      "description": "Stay dry and cool during workouts with our performance Butter Goods x The Smurf. "
+    },
+    {
+      "id": 5,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/162469-0-Krooked-Eyes.jpg",
+      "name": "Krooked Eyes T-Shir",
+      "price": 18.99,
+      "rating": 4.7,
+      "description": "Stay dry and cool during workouts with our performance Krooked Eyes T-Shir. "
+    },
+    {
+      "id": 6,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/161209-0-HUF-TheDrop.jpg",
+      "name": "HUF The Drop T-Shirt white",
+      "price": 17.99,
+      "rating": 9.7,
+      "description": "Stay dry and cool during workouts with our performance HUF The Drop T-Shirt white. "
+    }
+  ]
+}
