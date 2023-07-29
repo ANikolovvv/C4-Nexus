@@ -1,9 +1,10 @@
 import styles from "./Title.module.css";
 
-const Title = ({ children }) => {
+const Title = ({ category,description }) => {
   return (
     <div className={styles.head_box}>
-      <h1 className={[styles.head]}>{children}</h1>
+      <h2 className={styles.head}>{category}</h2>
+      <p className={styles.desc_title}>{description}</p>
     </div>
   );
 };
