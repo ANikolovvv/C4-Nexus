@@ -12,31 +12,28 @@ const FilterForm = ({ data, onFilter }) => {
   };
 
   const applyFilter = (selectedOption) => {
+    console.log(selectedOption)
     const [selectedColor, selectedPrice] = selectedOption.split("|");
-
     let filtered = filteredData(data, selectedColor, selectedPrice);
     onFilter(filtered);
   };
 
   return (
-    <>
-      <div className={styles.filter_container}>
-        <h3 className={styles.title_filter}>Filter</h3>
-        <select
-          className={styles.select}
-          value={selectedOption}
-          onChange={handleOptionChange}
-        >
-          <option value="">All Colors and Prices</option>
-          <option value="|">All Colors</option>
-          {data.map((item) => (
-            <option key={item.image} value={`${item.color}|${item.price}`}>
-              {item.color} - ${item.price}
-            </option>
-          ))}
-        </select>
-      </div>
-    </>
+    <div className={styles.filter_container}>
+      <h3 className={styles.title_filter}>Filter</h3>
+      <select
+        className={styles.select}
+        value={selectedOption}
+        onChange={handleOptionChange}
+      >
+        <option value="|">All Colors and Prices </option>
+        {data.map((item) => (
+          <option key={item.image} value={`${item.color}|${item.price}`}>
+            {item.color} - ${item.price}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
 
