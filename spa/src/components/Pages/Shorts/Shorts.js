@@ -1,7 +1,9 @@
 import Template from "../../Template/Template";
-import data from "../../../data.json";
+import { useContext } from "react";
+import { dataContext } from "../../../context/dataContext";
 
 const Shorts = () => {
+  const data = useContext(dataContext);
   return (
     <Template
       data={data.shorts}
