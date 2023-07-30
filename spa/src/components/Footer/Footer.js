@@ -10,7 +10,7 @@ const Footer = () => {
         <Link to="/privacy-policy">Privacy Policy</Link>
         <Link to="/contact-us">Contact Us</Link>
       </div>
-      <p>&copy; 2023 Your Company. All rights reserved.</p>
+      <p>&copy; 2023 All rights reserved.</p>
     </footer>
   );
 };
