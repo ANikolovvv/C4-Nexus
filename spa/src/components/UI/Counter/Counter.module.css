@@ -1,0 +1,19 @@
+.counter {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  font-weight: 700;
+  color: #06448f;
+  border-bottom: 3px solid #2ef0e966;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .counter {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+}
+@media (max-width: 480px) {
+}
