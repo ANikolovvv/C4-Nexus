@@ -5,6 +5,8 @@
   text-align: center;
   background-color: rgb(249, 247, 247);
   padding: 0 20px;
+  box-shadow: rgba(46, 240, 233, 0.4) 0px 5px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .container {
@@ -12,8 +14,6 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  box-shadow: rgba(46, 240, 233, 0.4) 0px 5px;
-  
 }
 .logo {
   max-width: 100%;
@@ -41,7 +41,7 @@
   font-weight: bold;
   border: none;
   border-radius: 25px;
-  padding: 12px 20px;
+  padding: 6px 10px;
   cursor: pointer;
   box-shadow: rgba(46, 240, 233, 0.4) 0px 5px;
 }
@@ -51,4 +51,56 @@
 .box li a {
   text-decoration: none;
   color: black;
+}
+.nav-mobile {
+  display: none;
+}
+.icon{
+  display: none;
+}
+@media (max-width: 1200px) {
+  .logo {
+    height: 50px;
+  }
+  .box > li {
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container{
+    padding: 5px;
+    justify-content: center;
+    height: 40px;
+  }
+  .logo{
+    position: absolute;
+    left: 15%;
+    height: 30px;
+    order: 2;
+    margin-bottom: 2px;
+    margin-left: 5px;
+  }
+  .ul_container{
+    display: none;
+  }
+  .nav-mobile{
+    position: absolute;
+    left: 5%;
+    display: flex;
+    margin-right: 5px;
+    
+  }
+  .icon{
+    position: absolute;
+    display: block;
+    order: 3;
+    right: 5%;
+  }
+}
+@media (max-width: 480px) {
 }
