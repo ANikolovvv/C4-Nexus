@@ -1,5 +1,4 @@
 import styles from "../FilterForm/FilterForm.module.css";
-import React, { useState } from "react";
 
 const SortGrid = ({ onSearch }) => {
   const handleSortChange = (event) => {
@@ -10,8 +9,13 @@ const SortGrid = ({ onSearch }) => {
 
   return (
     <div className={styles.filter_container}>
-      <h3 className={styles.title_filter}>Sort by</h3>
-      <select  className={styles.select}  name="sorting" onChange={handleSortChange}>
+      <h3 className={styles.title_filter}>Sort</h3>
+      <select
+        className={styles.select}
+        name="sorting"
+        onChange={handleSortChange}
+      >
+        <option value="">Select an option</option>
         <option value="alphabeticalA-Z">Alphabetical a-z</option>
         <option value="AlphabeticalZ-A">Alphabetical z-a</option>
         <option value="PriceAscending">Price ascending</option>
