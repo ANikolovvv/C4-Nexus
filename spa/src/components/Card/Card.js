@@ -1,22 +1,15 @@
-import { useState } from "react";
 import styles from "./Card.module.css";
 
 const Card = ({ info }) => {
-  const [isAddedToCart, setIsAddedToCart] = useState(false);
-
   const handleAddToCart = () => {
-    setIsAddedToCart(true);
-
-    setTimeout(() => {
-      setIsAddedToCart(false);
-    }, 3000);
+    alert("Product added to cart successfully!");
   };
 
   return (
     <>
       <div className={[styles.card]}>
         <div className={[styles.img_box]}>
-          <img src={info.image} alt="Product Image" className={styles.image} />
+          <img src={info.image} alt="product" className={styles.image} />
         </div>
         <div className={[styles.info]}>
           <h3 className={[styles.title]}>{info.name}</h3>
@@ -30,12 +23,9 @@ const Card = ({ info }) => {
             <span className={[styles.star]}>&#9733;</span>
           </div>
         </div>
-        <button onClick={handleAddToCart} className={styles.add_to_cart_button}>
+        <button onClick={handleAddToCart} className={styles.add_button}>
           Add to Cart
         </button>
-        {isAddedToCart && (
-          <div className={styles.success_alert}>Product added to cart</div>
-        )}
       </div>
     </>
   );
