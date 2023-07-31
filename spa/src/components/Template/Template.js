@@ -9,13 +9,11 @@ import Title from "../UI/Title/Title";
 import SortGrid from "../SortGrid/SortGrid";
 import Card from "../Card/Card";
 
-
 const Template = ({ data, title, desc }) => {
   const [stock, setStock] = useState(data.slice(0, 4));
   const [showMore, setShowMore] = useState(true);
-  const [sort,setSort] = useState([])
+  const [sort, setSort] = useState([]);
 
-  
   const handleFilter = (e) => {
     let filter = e.length > 0 ? e.slice(0, 4) : stock;
     setStock(filter);
@@ -23,14 +21,18 @@ const Template = ({ data, title, desc }) => {
 
   const handleSearch = (e) => {
     let find = sortingHandler(data, e);
-    setSort(find)
     let top = find.slice(0, 4);
-    setStock(top);
+    if (stock.length > 4) {
+      setStock(find);
+    } else {
+      setStock(top);
+    }
+    setSort(find);
   };
 
   const loadHandler = (e) => {
     if (showMore) {
-      let current=sort.length > 0 ? sort : data
+      let current = sort.length > 0 ? sort : data;
       setStock(current);
     } else {
       setStock(data.slice(0, 4));
@@ -51,7 +53,7 @@ const Template = ({ data, title, desc }) => {
         ))}
       </div>
       <div className={styles.btn_box}>
-        <Button onClick={loadHandler}  stock={stock} />
+        <Button onClick={loadHandler} stock={stock} />
       </div>
     </div>
   );
