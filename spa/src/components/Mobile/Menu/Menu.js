@@ -2,6 +2,8 @@ import { useState } from "react";
 import styles from "./Menu.module.css";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import PngsBox from "../../UI/Pngs/Pngs";
+
 
 const Menu = () => {
   const [toggle, setToggle] = useState(false);
@@ -28,6 +30,12 @@ const Menu = () => {
               </li>
             </ul>
           </div>
+          <div className={styles.info_box}>
+            <Link to="/terms-and-conditions">T&C</Link>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/contact-us">Contact Us</Link>
+          </div>
+          <PngsBox css={'png_box'}/>
         </div>
       ) : (
         <div>
