@@ -8,7 +8,7 @@ const Header = () => {
     <header className={styles.sticky}>
       <nav className={styles.container}>
         <Link className={styles.logo} to="/">
-          <img src="image006.jpg" alt="logo"></img>
+          <img src="image006.jpg" alt="logo"/>
         </Link>
         <div className={styles["nav-mobile"]}>
           <Menu />
