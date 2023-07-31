@@ -12,7 +12,7 @@ const Menu = () => {
     <div onClick={navigationHandler}>
       {toggle ? (
         <div className={styles.small}>
-          <div className={styles["icon"]}>
+          <div className={styles.icon}>
             <AiOutlineClose />
           </div>
           <div>
