@@ -20,8 +20,8 @@
 .footer_links a {
   text-decoration: none;
   color: #0333d1;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: 800;
+  font-size: 16px;
 }
 
 .footer_links a:hover {
@@ -29,8 +29,8 @@
 }
 .footer p {
   letter-spacing: 1;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: 800;
+  font-size: 16px;
 }
 @media (max-width: 768px) {
   .footer_links{
@@ -39,6 +39,9 @@
 }
 
 @media (max-width: 480px) {
+  .footer_links{
+    gap: 5px;
+  }
   .footer_links a{
     font-size: 12px;
   }
