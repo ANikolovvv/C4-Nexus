@@ -5,9 +5,28 @@
       "image": "https://cdn.skatedeluxe.com/images/product_images/400px/156762-0-Dickies-SlimWorkshortFlex.jpg",
       "name": "ComfortFit Shorts",
       "price": 29.99,
+      "discountedPrice": 19.99,
       "rating": 4.5,
       "description": "Stay comfortable and stylish with these lightweight shorts.",
       "color":"Brown"
+    },
+    {
+      "id": 1677,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/152479-0-REELL-ReflexEasy.jpg",
+      "name": "REELL REFLEX EASY SHORTS ",
+      "price": 39.99,
+      "rating": 4.5,
+      "description": "Stay comfortable and stylish with these lightweight shorts.",
+      "color":"Purple"
+    },
+    {
+      "id": 16222277,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/161978-0-Volcom-FrickinCrossShredStatic20.jpg",
+      "name": "REELL REFLEX EASY SHORTS ",
+      "price": 29.99,
+      "rating": 4.5,
+      "description": "Stay comfortable and stylish with these lightweight shorts.",
+      "color":"Grey"
     },
     {
       "id": 278,
@@ -32,6 +51,7 @@
       "image": "https://cdn.skatedeluxe.com/images/product_images/400px/161515-0-Volcom-OuterSpaced21.jpg",
       "name": "Shorts",
       "price": 27.99,
+      "discountedPrice": 15.99,
       "rating": 3.8,
       "description": "Keep cool during workouts and flexibility.",
       "color":"Brown"
@@ -63,22 +83,24 @@
       "price": 89.99,
       "rating": 4.7,
       "description": "Experience maximum comfort and support with our AirFlex technology.",
-      "color":"Blue"
+      "color":"Black"
     },
     {
       "id": 2,
       "image": "https://cdn.skatedeluxe.com/images/product_images/400px/159147-0-NikeSB-xKCDCDunkHighPro.jpg",
       "name": "Nike SB x KCDC Dunk",
       "price": 79.99,
+      "discountedPrice": 59.99,
       "rating": 4.4,
       "description": "Conquer any terrain with confidence in these durable hiking shoes.",
-      "color":"Blue"
+      "color":"Pink"
     },
     {
       "id": 3,
       "image": "https://cdn.skatedeluxe.com/images/product_images/400px/157777-0-NikeSB-BlazerLowProGT.jpg",
       "name": "Nike SB Blazer Low Pro GT",
       "price": 79.99,
+      "discountedPrice": 69.99,
       "rating": 5.6,
       "description": "Perfect for everyday wear, these sneakers offer style and comfort.",
       "color":"Blue"
@@ -90,7 +112,7 @@
       "price": 84.99,
       "rating": 7.6,
       "description": "Perfect for everyday wear, these sneakers offer style and comfort.",
-      "color":"Blue"
+      "color":"Green"
     },
     {
       "id": 5,
@@ -99,16 +121,37 @@
       "price": 54.99,
       "rating": 4.6,
       "description": "Perfect for everyday wear, these sneakers offer style and comfort.",
-      "color":"Blue"
+      "color":"Black"
     },
     {
       "id": 6,
       "image": "https://cdn.skatedeluxe.com/images/product_images/400px/161160-0-NikeSB-IshodPremium.jpg",
       "name": "Nike SB Zoom Janoski O",
       "price": 84.99,
+      "discountedPrice": 69.99,
       "rating": 6,
       "description": "Perfect for everyday wear, these sneakers offer style and comfort.",
-      "color":"Blue"
+      "color":"Brown"
+    },
+    {
+      "id": 665756,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/116459-0-NewBalanceNumeric-440.jpg",
+      "name": "NEW BALANCE NUMERIC 440 SHOES ",
+      "price": 84.99,
+      "discountedPrice": 69.99,
+      "rating": 6,
+      "description": "Perfect for everyday wear, these sneakers offer style and comfort.",
+      "color":"Grey"
+    },
+    {
+      "id": 65,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/137728-0-Vans-EraPro.jpg",
+      "name": "VANS X SHAKE JUNT ERA PRO SHOES ",
+      "price": 75.99,
+      "discountedPrice": 69.99,
+      "rating": 6,
+      "description": "Perfect for everyday wear, these sneakers offer style and comfort.",
+      "color":"Black"
     }
   ],
   "t-shirts": [
@@ -135,6 +178,7 @@
       "image": "https://image.spreadshirtmedia.com/image-server/v1/products/T1112A54PA3559PT17X107Y68D1012404856W8466H8466/views/1,width=378,height=378,ap",
       "name": "Primitive Legend Black",
       "price": 28.99,
+      "discountedPrice": 18.99,
       "rating": 7.7,
       "description": "Stay dry and cool during workouts with our performance Primitive Legend. ",
       "color":"Black"
@@ -162,9 +206,31 @@
       "image": "https://cdn.skatedeluxe.com/images/product_images/400px/161209-0-HUF-TheDrop.jpg",
       "name": "HUF The Drop T-Shirt white",
       "price": 17.99,
+      "discountedPrice": 19.99,
       "rating": 9.7,
       "description": "Stay dry and cool during workouts with our performance HUF The Drop T-Shirt white. ",
-      "color":"Blue"
+      "color":"White"
+
+    },
+    {
+      "id": 743543643,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/163539-0-Iriedaily-Peaceride.jpg",
+      "name": "IRIEDAILY PEACERIDE T-SHIRT (CLAY)",
+      "price": 37.99,
+      "rating": 5.7,
+      "description": "Stay dry and cool during workouts with our performance IRIEDAILY PEACERIDE T-SHIRT. ",
+      "color":"Grey"
+    
+    },
+    {
+      "id": 811111,
+      "image": "https://cdn.skatedeluxe.com/images/product_images/400px/162606-0-CarharttWIP-FiboOrganic.jpg",
+      "name": "CARHARTT WIP FIBO ORGANIC T-SHIRT (CHERRY)",
+      "price": 57.99,
+      "discountedPrice": 40.99,
+      "rating": 9.7,
+      "description": "Stay dry and cool during workouts with our performance  T-SHIRT (CHERRY) red. ",
+      "color":"Red"
     }
   ]
 }
