@@ -6,9 +6,19 @@
   justify-content: center;
   text-align: center;
   border-radius: 10px;
+  border: 1px solid rgb(12, 145, 152);
   background-color: #fff;
-  box-shadow: 2px 4px 8px rgba(46, 240, 233, 0.4);
   height: 450px;
+}
+.heart{
+  position: absolute;
+  top: 1%;
+  right: 2%;;
+  color: #f8340d;
+}
+
+.card:hover{
+  box-shadow: 4px 4px 4px 4px  rgba(46, 240, 233, 0.4);
 }
 .info {
   text-align: start;
@@ -42,14 +52,23 @@
   margin-bottom: 5px;
   letter-spacing: 1px;
 }
-
-.price {
-  font-size: 14px;
-  font-weight: bold;
-  color: #00b894;
+.prices{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f8340d;
+}
+.discount {
+  color: #030303;
+  text-decoration: line-through; 
+}
+
 .color {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   color: #1f00b8;
   margin-bottom: 2px;
