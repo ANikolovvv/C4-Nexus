@@ -26,7 +26,7 @@ const FilterForm = ({ data, onFilter }) => {
         value={selectedOption}
         onChange={handleOptionChange}
       >
-        <option value="|">All Colors and Prices </option>
+        <option value="|">Colors and Prices</option>
         {data.map((item) => (
           <option key={item.image} value={`${item.color}|${item.price}`}>
             {item.color} - ${item.price}
