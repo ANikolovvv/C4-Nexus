@@ -5,10 +5,10 @@ The app features three main pages, each dedicated to a specific stock category. 
 With its user-friendly interface and functionalities, this app provides an excellent way to manage and explore different stock options in one place." </p>\_\*\*
 <hr/>
 <h3 align="center"><i>Challenges: </i></h3>
-- <i><b>"I am facing a challenge to write CSS that does not interfere with other elements on the page. Ensuring that my CSS styles do not break existing elements is a top priority."</b></i>
+<i><b>"I am facing a challenge to write CSS that does not interfere with other elements on the page. Ensuring that my CSS styles do not break existing elements is a top priority."</b></i>
 <hr/>
 <h4 align="center"><i>Stack: </i></h4>
-- <i><b>React 18.2.0</b></i>
-- <i><b>React - Icons 4.10.1</b></i>
-- <i><b>Node v18.14.0</b></i>
+ <i><b>React - 18.2.0, </b></i>
+ <i><b>React - Icons 4.10.1, </b></i>
+<i><b>Node -  v18.14.0</b></i>
 <hr/>
