@@ -12,7 +12,7 @@ const FilterForm = ({ data, onFilter }) => {
   };
 
   const applyFilter = (selectedOption) => {
-    console.log(selectedOption)
+    console.log(selectedOption);
     const [selectedColor, selectedPrice] = selectedOption.split("|");
     let filtered = filteredData(data, selectedColor, selectedPrice);
     onFilter(filtered);
