@@ -46,6 +46,7 @@ const Template = ({ data, title, desc }) => {
         <FilterForm
           data={data}
           onFilter={handleFilter}
+          set={setStock}
           title="Filter"
           mobile={false}
         />
@@ -57,6 +58,7 @@ const Template = ({ data, title, desc }) => {
             <FilterForm
               data={data}
               onFilter={handleFilter}
+              set={setStock}
               title="Open Filter"
               mobile={true}
             />
