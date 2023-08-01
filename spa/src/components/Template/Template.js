@@ -42,18 +42,41 @@ const Template = ({ data, title, desc }) => {
   };
   return (
     <div className={styles.container}>
-      <div className={styles.header_box}>
-        <FilterForm data={data} onFilter={handleFilter} />
-        <Title data={data} category={title} description={desc} stock={stock} />
-        <SortGrid data={data} onSearch={handleSearch} />
+      <div className={styles.desktop}>
+        <FilterForm
+          data={data}
+          onFilter={handleFilter}
+          title="Filter"
+          mobile={false}
+        />
       </div>
-      <div className={styles.cards_box}>
-        {stock.map((x) => (
-          <Card key={x.image} info={x} />
-        ))}
-      </div>
-      <div className={styles.btn_box}>
-        <Button onClick={loadHandler} stock={stock} />
+
+      <div className={styles.main_box}>
+        <div className={styles.mian_title_box}>
+          <div className={styles.mobile}>
+            <FilterForm
+              data={data}
+              onFilter={handleFilter}
+              title="Open Filter"
+              mobile={true}
+            />
+          </div>
+          <Title
+            data={data}
+            category={title}
+            description={desc}
+            stock={stock}
+          />
+          <SortGrid data={data} onSearch={handleSearch} />
+        </div>
+        <div className={styles.cards_box}>
+          {stock.map((x) => (
+            <Card key={x.image} info={x} />
+          ))}
+        </div>
+        <div className={styles.btn_box}>
+          <Button onClick={loadHandler} stock={stock} />
+        </div>
       </div>
     </div>
   );
