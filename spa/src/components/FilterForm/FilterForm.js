@@ -1,38 +1,123 @@
 import { filteredData } from "../../utils/helpers";
-import styles from "./FilterForm.module.css";
-import React, { useState } from "react";
+import { AiOutlineClose, AiOutlinePlus } from "react-icons/ai";
 
-const FilterForm = ({ data, onFilter }) => {
-  const [selectedOption, setSelectedOption] = useState("");
+import styles from "./Filter.module.css";
+import { useState } from "react";
 
-  const handleOptionChange = (event) => {
-    const selectedOption = event.target.value;
-    setSelectedOption(selectedOption);
-    applyFilter(selectedOption);
+const FilterForm = ({ data, onFilter, title, mobile }) => {
+  const [checkedColors, setCheckedColors] = useState([]);
+  const [checkedPrice, setCheckedPrice] = useState([]);
+  const [open, setOpen] = useState(true);
+  const colorArr = data.map((x) => x.color);
+  const uniqueArr = [...new Set(colorArr)];
+
+  const handleColorChange = (event) => {
+    const { value, checked } = event.target;
+
+    if (checked) {
+      setCheckedColors((prevColors) => [...prevColors, value]);
+    } else {
+      setCheckedColors((prevColors) =>
+        prevColors.filter((color) => color !== value)
+      );
+    }
   };
 
-  const applyFilter = (selectedOption) => {
-    console.log(selectedOption);
-    const [selectedColor, selectedPrice] = selectedOption.split("|");
-    let filtered = filteredData(data, selectedColor, selectedPrice);
+  const handlePriceChange = (event) => {
+    const { value, checked } = event.target;
+    if (checked) {
+      setCheckedPrice((prevPrice) => [...prevPrice, value]);
+    } else {
+      setCheckedPrice((prevPrice) =>
+        prevPrice.filter((price) => price !== value)
+      );
+    }
+  };
+
+  const handleFilter = () => {
+    let filtered = filteredData(data, checkedColors, checkedPrice);
     onFilter(filtered);
+    setOpen(!open);
   };
-
+  const handleFilterReset = () => {
+    setCheckedColors([]);
+    setCheckedPrice([]);
+    setOpen(!open);
+  };
+  const handlerMobileFilter = () => {
+    setOpen(!open);
+  };
   return (
-    <div className={styles.filter_container}>
-      <h3 className={styles.title_filter}>Filter</h3>
-      <select
-        className={styles.select}
-        value={selectedOption}
-        onChange={handleOptionChange}
+    <div>
+      <h3 className={styles.filter_title}>
+        {title}{" "}
+        {mobile && (
+          <AiOutlinePlus
+            size={16}
+            color="#1d6e6b99"
+            onClick={handlerMobileFilter}
+          />
+        )}
+      </h3>
+      <div
+        className={
+          mobile && !open ? styles.mobile_container : styles.filter_container
+        }
       >
-        <option value="|">Colors and Prices</option>
-        {data.map((item) => (
-          <option key={item.image} value={`${item.color}|${item.price}`}>
-            {item.color} - ${item.price}
-          </option>
-        ))}
-      </select>
+        {!open && (
+          <div className={styles.icon_box}>
+            <AiOutlineClose
+              color="black"
+              size={20}
+              onClick={handlerMobileFilter}
+              className={styles.icon}
+            />
+          </div>
+        )}
+        <h4 className={styles.sub_title}>Colors:</h4>
+        <div className={styles.filter_box}>
+          {uniqueArr.map((color) => (
+            <label key={color} htmlFor={color} className={styles.label_box}>
+              {color}
+              <input
+                id={color}
+                className={styles.check}
+                type="checkbox"
+                value={color}
+                checked={checkedColors.includes(color) || false}
+                onChange={handleColorChange}
+              />
+            </label>
+          ))}
+        </div>
+        <h4 className={styles.sub_title}>Prices:</h4>
+        <div className={styles.filter_box}>
+          <label htmlFor="price" className={styles.label_box}>
+            0:25
+            <input
+              className={styles.check}
+              type="checkbox"
+              value="0-25"
+              checked={checkedPrice.includes("0-25") || false}
+              onChange={handlePriceChange}
+            />
+          </label>
+          <label htmlFor="price" className={styles.label_box}>
+            25:100
+            <input
+              className={styles.check}
+              type="checkbox"
+              value="25-100"
+              checked={checkedPrice.includes("25-100") || false}
+              onChange={handlePriceChange}
+            />
+          </label>
+        </div>
+        <div className={styles.btn_box}>
+          <button onClick={handleFilter}>Filter</button>
+          <button onClick={handleFilterReset}>Reset</button>
+        </div>
+      </div>
     </div>
   );
 };
