@@ -8,36 +8,35 @@
   gap: 8px;
 }
 .head {
+  font-family: "Courier New", Courier, monospace;
   letter-spacing: 1px;
 }
-.desc_title{
+.desc_title {
   letter-spacing: 0.1;
   font-weight: 600;
   font-size: 14px;
 }
 
 @media (max-width: 1200px) {
-   .head{
+  .head {
     font-size: 18px;
-   }
-  
+  }
 }
 
 @media (max-width: 768px) {
- .head{
-  font-size: 16px;
- }
- .desc_title{
-  margin: 0px 5px;
- }
+  .head {
+    font-size: 16px;
+  }
+  .desc_title {
+    margin: 0px 5px;
+  }
 }
 @media (max-width: 600px) {
- .head_box{
-  margin: 5px 0px;
- }
- 
+  .head_box {
+    order: 1;
+    width: 100%;
+    margin: 5px 0px;
+  }
 }
 @media (max-width: 480px) {
-  
-
 }
