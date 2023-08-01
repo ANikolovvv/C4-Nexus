@@ -4,10 +4,11 @@ import { AiOutlineClose, AiOutlinePlus } from "react-icons/ai";
 import styles from "./Filter.module.css";
 import { useState } from "react";
 
-const FilterForm = ({ data, onFilter, title, mobile }) => {
+const FilterForm = ({ data, onFilter, title, mobile, set }) => {
   const [checkedColors, setCheckedColors] = useState([]);
   const [checkedPrice, setCheckedPrice] = useState([]);
   const [open, setOpen] = useState(true);
+
   const colorArr = data.map((x) => x.color);
   const uniqueArr = [...new Set(colorArr)];
 
@@ -39,11 +40,14 @@ const FilterForm = ({ data, onFilter, title, mobile }) => {
     onFilter(filtered);
     setOpen(!open);
   };
+  
   const handleFilterReset = () => {
     setCheckedColors([]);
     setCheckedPrice([]);
     setOpen(!open);
+    set(data.slice(0, 4));
   };
+
   const handlerMobileFilter = () => {
     setOpen(!open);
   };
@@ -93,22 +97,32 @@ const FilterForm = ({ data, onFilter, title, mobile }) => {
         <h4 className={styles.sub_title}>Prices:</h4>
         <div className={styles.filter_box}>
           <label htmlFor="price" className={styles.label_box}>
-            0:25
+            14:30
             <input
               className={styles.check}
               type="checkbox"
-              value="0-25"
-              checked={checkedPrice.includes("0-25") || false}
+              value="14-30"
+              checked={checkedPrice.includes("14-30") || false}
               onChange={handlePriceChange}
             />
           </label>
           <label htmlFor="price" className={styles.label_box}>
-            25:100
+            30:60
             <input
               className={styles.check}
               type="checkbox"
-              value="25-100"
-              checked={checkedPrice.includes("25-100") || false}
+              value="30-60"
+              checked={checkedPrice.includes("30-60") || false}
+              onChange={handlePriceChange}
+            />
+          </label>
+          <label htmlFor="price" className={styles.label_box}>
+            60:100
+            <input
+              className={styles.check}
+              type="checkbox"
+              value="60-100"
+              checked={checkedPrice.includes("60-100") || false}
               onChange={handlePriceChange}
             />
           </label>
