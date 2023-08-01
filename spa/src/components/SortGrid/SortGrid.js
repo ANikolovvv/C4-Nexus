@@ -1,4 +1,4 @@
-import styles from "../FilterForm/FilterForm.module.css";
+import styles from "./SortGrid.module.css";
 
 const SortGrid = ({ onSearch }) => {
   const handleSortChange = (event) => {
@@ -9,7 +9,7 @@ const SortGrid = ({ onSearch }) => {
 
   return (
     <div className={styles.filter_container}>
-      <h3 className={styles.title_filter}>Sort</h3>
+      <h3 className={styles.title_sort}>Sort</h3>
       <select
         className={styles.select}
         name="sorting"
