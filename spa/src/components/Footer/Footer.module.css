@@ -7,6 +7,7 @@
   background-color: rgb(249, 247, 247);
   padding: 10px;
   text-align: center;
+  box-shadow: inset 0em 3px rgba(46, 240, 233, 0.4) ;
 }
 
 .footer_links {
@@ -42,16 +43,6 @@
 }
 
 @media (max-width: 600px) {
-
-  .footer_links a {
-    font-size: 14px;
-  }
-  .footer p {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
   .footer_links {
     gap: 5px;
   }
