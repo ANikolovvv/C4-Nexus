@@ -19,6 +19,7 @@
     transform: translateX(0);
   }
 }
+
 .box {
   list-style: none;
   padding: 0;
@@ -29,6 +30,7 @@
   align-items: flex-start;
   gap: 10px;
 }
+
 .small a {
   margin: 0;
   padding: 0;
@@ -39,6 +41,7 @@
   font-weight: 800;
   font-size: 18px;
 }
+
 .small a:hover {
   color: #007bff;
 }
