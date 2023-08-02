@@ -77,7 +77,9 @@ const Template = ({ data, title, desc }) => {
           ))}
         </div>
         <div className={styles.btn_box}>
-          <Button onClick={headlerLoadMore} stock={stock} />
+          <Button onClick={headlerLoadMore} css={"load_box"}>
+            {stock.length <= 4 ? "Load More" : "Load Less"}
+          </Button>
         </div>
       </div>
     </div>
