@@ -3,6 +3,8 @@ import styles from "./Filter.module.css";
 import { filteredData } from "../../utils/helpers";
 import { AiOutlineClose, AiOutlinePlus } from "react-icons/ai";
 import { useState } from "react";
+import Label from "../UI/Label/Label";
+import Button from "../UI/Button/Button";
 
 const FilterForm = ({ data, onFilter, title, mobile, set }) => {
   const [checkedColors, setCheckedColors] = useState([]);
@@ -59,8 +61,8 @@ const FilterForm = ({ data, onFilter, title, mobile, set }) => {
         {mobile && (
           <AiOutlinePlus
             size={16}
-            color="#1d6e6b99"
             onClick={handlerMobileFilter}
+            className={styles.plus}
           />
         )}
       </h3>
@@ -82,55 +84,38 @@ const FilterForm = ({ data, onFilter, title, mobile, set }) => {
         <h4 className={styles.sub_title}>Colors:</h4>
         <div className={styles.filter_box}>
           {uniqueArr.map((color) => (
-            <label key={color} htmlFor={color} className={styles.label_box}>
-              {color}
-              <input
-                id={color}
-                className={styles.check}
-                type="checkbox"
-                value={color}
-                checked={checkedColors.includes(color) || false}
-                onChange={handleColorChange}
-              />
-            </label>
+            <Label
+              key={color}
+              type={color}
+              array={checkedColors}
+              handleTypeChange={handleColorChange}
+            />
           ))}
         </div>
         <h4 className={styles.sub_title}>Prices:</h4>
         <div className={styles.filter_box}>
-          <label htmlFor="price" className={styles.label_box}>
-            14:30
-            <input
-              className={styles.check}
-              type="checkbox"
-              value="14-30"
-              checked={checkedPrice.includes("14-30") || false}
-              onChange={handlePriceChange}
-            />
-          </label>
-          <label htmlFor="price" className={styles.label_box}>
-            30:60
-            <input
-              className={styles.check}
-              type="checkbox"
-              value="30-60"
-              checked={checkedPrice.includes("30-60") || false}
-              onChange={handlePriceChange}
-            />
-          </label>
-          <label htmlFor="price" className={styles.label_box}>
-            60:100
-            <input
-              className={styles.check}
-              type="checkbox"
-              value="60-100"
-              checked={checkedPrice.includes("60-100") || false}
-              onChange={handlePriceChange}
-            />
-          </label>
+          <Label
+            key={"15-30"}
+            type={"15-30"}
+            array={checkedPrice}
+            handleTypeChange={handlePriceChange}
+          />
+          <Label
+            key={"30-60"}
+            type={"30-60"}
+            array={checkedPrice}
+            handleTypeChange={handlePriceChange}
+          />
+          <Label
+            key={"60-100"}
+            type={"60-100"}
+            array={checkedPrice}
+            handleTypeChange={handlePriceChange}
+          />
         </div>
         <div className={styles.btn_box}>
-          <button onClick={handleFilter}>Filter</button>
-          <button onClick={handleFilterReset}>Reset</button>
+          <Button onClick={handleFilter}>Filter</Button>
+          <Button onClick={handleFilterReset}>Reset</Button>
         </div>
       </div>
     </div>
