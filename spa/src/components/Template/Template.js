@@ -6,8 +6,8 @@ import FilterForm from "../FilterForm/FilterForm";
 import Button from "../UI/Button/Button";
 import Title from "../UI/Title/Title";
 
-import SortGrid from "../SortGrid/SortGrid";
 import Card from "../Card/Card";
+import Sort from "../SortGrid/Sort";
 
 const Template = ({ data, title, desc }) => {
   const [stock, setStock] = useState(data.slice(0, 4));
@@ -30,7 +30,7 @@ const Template = ({ data, title, desc }) => {
     setSort(find);
   };
 
-  const loadHandler = (e) => {
+  const headlerLoadMore = (e) => {
     if (showMore) {
       let current = sort.length > 0 ? sort : data;
       setStock(current);
@@ -69,7 +69,7 @@ const Template = ({ data, title, desc }) => {
             description={desc}
             stock={stock}
           />
-          <SortGrid data={data} onSearch={handleSearch} />
+          <Sort data={data} onSearch={handleSearch} />
         </div>
         <div className={styles.cards_box}>
           {stock.map((x) => (
@@ -77,7 +77,7 @@ const Template = ({ data, title, desc }) => {
           ))}
         </div>
         <div className={styles.btn_box}>
-          <Button onClick={loadHandler} stock={stock} />
+          <Button onClick={headlerLoadMore} stock={stock} />
         </div>
       </div>
     </div>
