@@ -6,6 +6,7 @@
   align-items: center;
   font-family: "Courier New", Courier, monospace;
 }
+
 .load_btn {
   align-items: center;
   background-color: #007bff;
@@ -32,10 +33,9 @@
     font-size: 14px;
   }
 }
+
 @media (max-width: 600px) {
   .load_btn {
     font-size: 12px;
   }
-}
-@media (max-width: 480px) {
 }
