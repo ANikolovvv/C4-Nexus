@@ -1,10 +1,10 @@
 import styles from "./Button.module.css";
 
-const Button = ({ onClick, stock }) => {
+const Button = ({children, onClick ,css}) => {
   return (
-    <div className={styles.load_box}>
-      <button className={styles.load_btn} onClick={onClick}>
-        {stock.length <= 4 ? "Load More" : "Load Less"}
+    <div className={styles[css]}>
+      <button  onClick={onClick}>
+       {children}
       </button>
     </div>
   );
