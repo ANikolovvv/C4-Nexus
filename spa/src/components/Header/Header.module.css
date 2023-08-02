@@ -1,4 +1,4 @@
-.sticky {
+.sticky_header {
   position: sticky;
   top: 0;
   z-index: 100;
@@ -15,6 +15,7 @@
   justify-content: space-around;
   align-items: center;
 }
+
 .logo {
   max-width: 100%;
   height: 60px;
@@ -36,6 +37,7 @@
   align-items: center;
   gap: 20px;
 }
+
 .box > li {
   font-size: 16px;
   font-weight: bold;
@@ -48,16 +50,18 @@
 .box > li:hover {
   background-color: #00c3ff;
 }
+
 .box li a {
   text-decoration: none;
   color: black;
 }
-.nav-mobile {
+.nav_mobile {
   display: none;
 }
-.icon{
+.icon {
   display: none;
 }
+
 @media (max-width: 1200px) {
   .logo {
     height: 50px;
@@ -72,12 +76,13 @@
 }
 
 @media (max-width: 600px) {
-  .container{
+  .container {
     padding: 5px;
     justify-content: center;
     height: 40px;
   }
-  .logo{
+
+  .logo {
     position: absolute;
     left: 15%;
     height: 30px;
@@ -85,22 +90,21 @@
     margin-bottom: 2px;
     margin-left: 5px;
   }
-  .ul_container{
+
+  .ul_container {
     display: none;
   }
-  .nav-mobile{
+
+  .nav_mobile {
     position: absolute;
     left: 5%;
     display: flex;
     margin-right: 5px;
-    
   }
-  .icon{
+  .icon {
     position: absolute;
     display: block;
     order: 3;
     right: 5%;
   }
-}
-@media (max-width: 480px) {
 }
