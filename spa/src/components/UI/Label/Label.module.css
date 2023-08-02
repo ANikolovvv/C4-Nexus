@@ -1,0 +1,15 @@
+.label_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 2px solid #64ced8;
+  border-radius: 4px;
+  padding: 5px 10px;
+  gap: 2px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.label_box:hover {
+  background-color: #00c3ff;
+}
