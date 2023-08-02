@@ -1,15 +1,16 @@
-import { useState } from "react";
 import styles from "./Menu.module.css";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-router-dom";
 import PngsBox from "../../UI/Pngs/Pngs";
 
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Menu = () => {
   const [toggle, setToggle] = useState(false);
   const navigationHandler = () => {
     setToggle(!toggle);
   };
+
   return (
     <div onClick={navigationHandler}>
       {toggle ? (
@@ -35,7 +36,7 @@ const Menu = () => {
             <Link to="/privacy-policy">Privacy Policy</Link>
             <Link to="/contact-us">Contact Us</Link>
           </div>
-          <PngsBox css={'png_box'}/>
+          <PngsBox css={"png_box"} />
         </div>
       ) : (
         <div>
