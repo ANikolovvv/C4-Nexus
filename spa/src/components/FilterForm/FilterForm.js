@@ -1,7 +1,7 @@
+import styles from "./Filter.module.css";
+
 import { filteredData } from "../../utils/helpers";
 import { AiOutlineClose, AiOutlinePlus } from "react-icons/ai";
-
-import styles from "./Filter.module.css";
 import { useState } from "react";
 
 const FilterForm = ({ data, onFilter, title, mobile, set }) => {
@@ -40,7 +40,7 @@ const FilterForm = ({ data, onFilter, title, mobile, set }) => {
     onFilter(filtered);
     setOpen(!open);
   };
-  
+
   const handleFilterReset = () => {
     setCheckedColors([]);
     setCheckedPrice([]);
@@ -51,10 +51,11 @@ const FilterForm = ({ data, onFilter, title, mobile, set }) => {
   const handlerMobileFilter = () => {
     setOpen(!open);
   };
+
   return (
     <div>
       <h3 className={styles.filter_title}>
-        {title}{" "}
+        {title}
         {mobile && (
           <AiOutlinePlus
             size={16}
@@ -68,7 +69,7 @@ const FilterForm = ({ data, onFilter, title, mobile, set }) => {
           mobile && !open ? styles.mobile_container : styles.filter_container
         }
       >
-        {!open && (
+        {!open && mobile && (
           <div className={styles.icon_box}>
             <AiOutlineClose
               color="black"
