@@ -1,8 +1,8 @@
 <h1 align="center"><i>C4 nexus task </i></h1>
 
-<p align="center">"This app is a stock for products, including shoes, t-shirts, and shorts. The application is built with React and can be started by running 'npm start' in the terminal.
+<p align="center"><b>"This app is a stock for products, including shoes, t-shirts, and shorts. The application is built with React and can be started by running 'npm start' in the terminal.
 The app features three main pages, each dedicated to a specific stock category. Users can easily filter and sort data, as well as view the title and total count sections for each category. Additionally, a container with 4 rows and a 'load more' button is available, allowing users to load additional items.
-With its user-friendly interface and functionalities, this app provides an excellent way to manage and explore different stock options in one place." </p>
+With its user-friendly interface and functionalities, this app provides an excellent way to manage and explore different stock options in one place."</b> </p>
 
 <hr/>
 <h3 align="center"><i>Challenges: </i></h3>
