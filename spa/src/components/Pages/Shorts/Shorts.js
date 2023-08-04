@@ -4,6 +4,7 @@ import { dataContext } from "../../../context/dataContext";
 
 const Shorts = () => {
   const data = useContext(dataContext);
+
   return (
     <Template
       data={data.shorts}
