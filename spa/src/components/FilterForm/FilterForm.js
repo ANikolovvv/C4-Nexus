@@ -87,6 +87,7 @@ const FilterForm = ({ data, onFilter, title, mobile, set, stock }) => {
           <div className={styles.icon_box}>
             <AiOutlineClose
               color="black"
+           
               size={20}
               onClick={handlerMobileFilter}
               className={styles.icon}
