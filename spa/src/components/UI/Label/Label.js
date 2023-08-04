@@ -1,6 +1,6 @@
 import styles from "./Label.module.css";
 
-const Label = ({type,array,handleTypeChange}) => {
+const Label = ({ type, array, handleTypeChange }) => {
   return (
     <label key={type} htmlFor={type} className={styles.label_box}>
       {type}
