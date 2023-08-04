@@ -13,3 +13,9 @@
 .label_box:hover {
   background-color: #00c3ff;
 }
+@media (max-width: 400px) {
+  .label_box {
+    padding: 0px 0px 0px 2px;
+    font-size: 16;
+  }
+}
