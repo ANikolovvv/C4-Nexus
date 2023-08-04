@@ -67,4 +67,7 @@
     border-bottom: 3px solid #2ef0e966;
     background-color: white;
   }
+  .select option{
+    font-size: 12px;
+  }
 }
