@@ -14,10 +14,18 @@ export const sortingHandler = (arrayData, sortArray) => {
           .sort((a, b) => b.name.localeCompare(a.name));
         break;
       case "PriceAscending":
-        currentData = currentData.slice().sort((a, b) => a.price - b.price);
+        currentData = currentData.slice().sort((a, b) => {
+          const priceA = a.discountedPrice || a.price;
+          const priceB = b.discountedPrice || b.price;
+          return priceA - priceB;
+        });
         break;
       case "PriceDescending":
-        currentData = currentData.slice().sort((a, b) => b.price - a.price);
+        currentData = currentData.slice().sort((a, b) => {
+          const priceA = a.discountedPrice || a.price;
+          const priceB = b.discountedPrice || b.price;
+          return priceB - priceA;
+        });
         break;
       default:
         break;
@@ -26,6 +34,7 @@ export const sortingHandler = (arrayData, sortArray) => {
 
   return currentData;
 };
+
 export const filteredData = (data, colors, prices) => {
   const price = prices[0] ? prices[0].split("-") : "";
   const min = Number(price[0]);
