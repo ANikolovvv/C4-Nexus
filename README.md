@@ -16,12 +16,12 @@ With its user-friendly interface and functionalities, this app provides an excel
 <hr/>
 
 <p align="center">
-  <img src="./images/desktop.png" width="450" alt='desktop' title="desktop">
+  <img src="./images/Desktop.png" width="450" alt='desktop' title="desktop">
 </p>
 
 <p align="center">
-   <img src="./images/mobile.png" width="250" alt="mobill" title="mobile">
-  <img src="./images/mobile-filter.png" alt='mobile filter' width="250" title="mobile filter">
-  <img src="./images/mobile-menu.png" alt='mobile filter' width="250" title="mobile menu"> 
+   <img src="./images/Mobile.png" width="250" alt="mobill" title="mobile">
+  <img src="./images/Mobile-filter.png" alt='mobile filter' width="250" title="mobile filter">
+  <img src="./images/Mobile-menu.png" alt='mobile filter' width="250" title="mobile menu"> 
 </p>
 <hr/>
