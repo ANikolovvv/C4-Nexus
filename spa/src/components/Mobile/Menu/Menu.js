@@ -1,5 +1,5 @@
 import styles from "./Menu.module.css";
-import PngsBox from "../../UI/Pngs/Pngs";
+import PngsBox from "../../UI/PngsBox/PngsBox";
 
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
