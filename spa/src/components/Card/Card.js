@@ -19,8 +19,10 @@ const Card = ({ info }) => {
         </div>
         <div className={styles.info}>
           <h3 className={styles.title}>{info.name}</h3>
-          <p className={styles.desc}>Product Description: {info.description}</p>
-          <p className={styles.color}>Color: {info.color}</p>
+          <p className={styles.desc}> {info.description}</p>
+          <p className={styles.color}>
+            {info.name} - {info.color}
+          </p>
           <div className={styles.prices}>
             <p className={`${styles.price} ${discount ? styles.discount : ""}`}>
               {info.price}$
