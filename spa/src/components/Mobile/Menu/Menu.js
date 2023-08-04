@@ -16,7 +16,7 @@ const Menu = () => {
       {toggle ? (
         <div className={styles.small}>
           <div className={styles.icon}>
-            <AiOutlineClose />
+            <AiOutlineClose size={20} />
           </div>
           <div>
             <ul className={styles.box}>
