@@ -18,6 +18,7 @@ With its user-friendly interface and functionalities, this app provides an excel
 <p align="center">
   <img src="./images/Desktop.png" width="450" alt='desktop' title="desktop">
 </p>
+<hr/>
 
 <p align="center">
    <img src="./images/Mobile (2).png" width="250" alt="mobill" title="mobile">
