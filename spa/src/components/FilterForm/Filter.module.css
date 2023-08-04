@@ -116,6 +116,11 @@
     width: 100%;
   }
 
+  .sub_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .filter_title {
     display: flex;
     flex-direction: row;
@@ -139,11 +144,11 @@
   }
 
   .btn_box {
-    position: fixed;
-    bottom: 0;
+    justify-content: space-between;
   }
 
   .btn_box button {
-    padding: 10px 20px;
+    padding: 5px 8px;
+    font-size: 14px;
   }
 }
