@@ -21,29 +21,28 @@ const Template = ({ data, title, desc }) => {
   const handleSearch = (e) => {
     let find = sortingHandler(data, e);
     let top = find.slice(0, 4);
+
     if (stock.length > 4) {
       setStock(find);
     } else {
       setStock(top);
+      setSort(find);
     }
-    setSort(find);
   };
 
-  const headlerLoadMore = (e) => {
-    if (showMore) {
+  const headlerLoadMore = () => {
+    if (!showMore) {
       if (stock.length > 4) {
-        setShowMore(!showMore);
         setStock(stock.slice(0, 4));
       } else {
-        let current = sort.length > 0 ? sort : data;
-        setStock(current);
-        setShowMore(!showMore);
+        setStock(data);
       }
     } else {
       let current = sort.length > 0 ? sort : data;
       setStock(current);
-      setShowMore(!showMore);
     }
+
+    setShowMore(!showMore);
   };
 
   return (
@@ -86,10 +85,7 @@ const Template = ({ data, title, desc }) => {
         </div>
         <div className={styles.btn_box}>
           <Button onClick={headlerLoadMore} css={"load_box"}>
-            {(!showMore && stock.length === 4) ||
-            (showMore && stock.length === 4)
-              ? "Load More"
-              : "Load Less"}
+            {showMore ? "Load More" : "Load Less"}
           </Button>
         </div>
       </div>
