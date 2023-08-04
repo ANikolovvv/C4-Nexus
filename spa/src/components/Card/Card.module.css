@@ -53,7 +53,7 @@
 .desc {
   font-weight: 600;
   font-size: 14px;
-  color: #555;
+  color: #241d1d;
   margin-bottom: 5px;
   letter-spacing: 1px;
 }
@@ -78,7 +78,7 @@
 .color {
   font-size: 16px;
   font-weight: bold;
-  color: #1f00b8;
+  color: #005fb8;
   margin-bottom: 2px;
 }
 
@@ -99,9 +99,9 @@
   top: 90%;
   background-color: #007bff;
   color: #ffffff;
-  padding: 5px 10px;
+  padding: 5px 7px;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
 }
@@ -164,10 +164,11 @@
     font-size: 16px;
   }
   .add_button {
-    top: 80%;
-    right: 5%;
+    top: 90%;
+    right: 2%;
   }
 }
+
 @media (max-width: 380px) {
   .img_box {
     height: 100px;
