@@ -11,6 +11,8 @@
 .head {
   font-family: "Courier New", Courier, monospace;
   letter-spacing: 1px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .desc_title {
@@ -26,9 +28,6 @@
 }
 
 @media (max-width: 768px) {
-  .head {
-    font-size: 16px;
-  }
   .desc_title {
     margin: 0px 5px;
   }
