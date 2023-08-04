@@ -12,14 +12,13 @@
 }
 
 .cards_box {
-  min-height: 625px;
+  min-height: 620px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 20px;
-  margin-top: 10px;
   margin-left: 15px;
 }
 
