@@ -20,8 +20,8 @@ function App() {
             <Route path="/shoes" element={<Shoes />}></Route>
             <Route path="/shirts" element={<Shirts />}></Route>
           </Routes>
-          <Footer />
         </main>
+        <Footer />
       </div>
     </DataProvider>
   );
