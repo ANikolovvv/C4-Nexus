@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
-import PngsBox from "../UI/Pngs/Pngs";
+import PngsBox from "../UI/PngsBox/PngsBox";
 
-const Footer = (css) => {
+const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer_links}>
-        <Link to="/terms-and-conditions">T&C</Link>
-        <Link to="/privacy-policy">Privacy Policy</Link>
-        <Link to="/contact-us">Contact Us</Link>
+        <Link to="/">T&C</Link>
+        <Link to="/">Privacy Policy</Link>
+        <Link to="/">Contact Us</Link>
         <PngsBox css={"png_box_footer"} />
       </div>
       <p>&copy; 2023 All rights reserved.</p>
