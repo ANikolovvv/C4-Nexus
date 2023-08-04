@@ -1,18 +1,29 @@
 import styles from "./Filter.module.css";
-
-import { filteredData } from "../../utils/helpers";
-import { AiOutlineClose, AiOutlinePlus } from "react-icons/ai";
-import { useState } from "react";
 import Label from "../UI/Label/Label";
 import Button from "../UI/Button/Button";
 
-const FilterForm = ({ data, onFilter, title, mobile, set }) => {
+import { filteredData } from "../../utils/helpers";
+import { AiOutlineClose, AiOutlineDown, AiOutlinePlus } from "react-icons/ai";
+import { useEffect, useState } from "react";
+
+const FilterForm = ({ data, onFilter, title, mobile, set, stock }) => {
   const [checkedColors, setCheckedColors] = useState([]);
   const [checkedPrice, setCheckedPrice] = useState([]);
   const [open, setOpen] = useState(true);
 
+  const [openColors, setOpenColors] = useState(false);
+  const [openPrices, setOpenPrices] = useState(false);
+
   const colorArr = data.map((x) => x.color);
   const uniqueArr = [...new Set(colorArr)];
+  const priceRangeArray = ["15-30", "30-60", "60-90"];
+
+  useEffect(() => {
+    if (!mobile) {
+      setOpenColors(true);
+      setOpenPrices(true);
+    }
+  }, [mobile]);
 
   const handleColorChange = (event) => {
     const { value, checked } = event.target;
@@ -54,17 +65,18 @@ const FilterForm = ({ data, onFilter, title, mobile, set }) => {
     setOpen(!open);
   };
 
+  const handleOpenColors = () => {
+    setOpenColors(!openColors);
+  };
+
+  const handleOpenPrices = () => {
+    setOpenPrices(!openPrices);
+  };
   return (
     <div>
       <h3 className={styles.filter_title}>
         {title}
-        {mobile && (
-          <AiOutlinePlus
-            size={16}
-            onClick={handlerMobileFilter}
-            className={styles.plus}
-          />
-        )}
+        {mobile && <AiOutlinePlus size={16} onClick={handlerMobileFilter} />}
       </h3>
       <div
         className={
@@ -81,40 +93,71 @@ const FilterForm = ({ data, onFilter, title, mobile, set }) => {
             />
           </div>
         )}
-        <h4 className={styles.sub_title}>Colors:</h4>
-        <div className={styles.filter_box}>
-          {uniqueArr.map((color) => (
-            <Label
-              key={color}
-              type={color}
-              array={checkedColors}
-              handleTypeChange={handleColorChange}
-            />
-          ))}
-        </div>
-        <h4 className={styles.sub_title}>Prices:</h4>
-        <div className={styles.filter_box}>
-          <Label
-            key={"15-30"}
-            type={"15-30"}
-            array={checkedPrice}
-            handleTypeChange={handlePriceChange}
-          />
-          <Label
-            key={"30-60"}
-            type={"30-60"}
-            array={checkedPrice}
-            handleTypeChange={handlePriceChange}
-          />
-          <Label
-            key={"60-100"}
-            type={"60-100"}
-            array={checkedPrice}
-            handleTypeChange={handlePriceChange}
-          />
-        </div>
+        <h4 className={styles.sub_title}>
+          Colors
+          {mobile && (
+            <AiOutlineDown size={16} onClick={handleOpenColors} color="black" />
+          )}
+        </h4>
+        {!mobile && (
+          <div className={styles.filter_box}>
+            {uniqueArr.map((color) => (
+              <Label
+                key={color}
+                type={color}
+                array={checkedColors}
+                handleTypeChange={handleColorChange}
+              />
+            ))}
+          </div>
+        )}
+        {mobile && openColors && (
+          <div className={styles.filter_box}>
+            {uniqueArr.map((color) => (
+              <Label
+                key={color}
+                type={color}
+                array={checkedColors}
+                handleTypeChange={handleColorChange}
+              />
+            ))}
+          </div>
+        )}
+        <h4 className={styles.sub_title}>
+          Prices
+          {mobile && (
+            <AiOutlineDown size={16} onClick={handleOpenPrices} color="black" />
+          )}
+        </h4>
+        {!mobile && (
+          <div className={styles.filter_box}>
+            {priceRangeArray.map((range) => (
+              <Label
+                key={range}
+                type={range}
+                array={checkedPrice}
+                handleTypeChange={handlePriceChange}
+              />
+            ))}
+          </div>
+        )}
+        {mobile && openPrices && (
+          <div className={styles.filter_box}>
+            {priceRangeArray.map((range) => (
+              <Label
+                key={range}
+                type={range}
+                array={checkedPrice}
+                handleTypeChange={handlePriceChange}
+              />
+            ))}
+          </div>
+        )}
+
         <div className={styles.btn_box}>
-          <Button onClick={handleFilter}>Filter</Button>
+          <Button onClick={handleFilter}>
+            {!mobile ? "Filter" : `Filter ${stock.length}/${data.length}`}
+          </Button>
           <Button onClick={handleFilterReset}>Reset</Button>
         </div>
       </div>
