@@ -7,7 +7,7 @@ import Button from "../UI/Button/Button";
 import Title from "../UI/Title/Title";
 
 import Card from "../Card/Card";
-import Sort from "../SortGrid/Sort";
+import Sort from "../Sort/Sort";
 
 const Template = ({ data, title, desc }) => {
   const [stock, setStock] = useState(data.slice(0, 4));
@@ -15,8 +15,7 @@ const Template = ({ data, title, desc }) => {
   const [sort, setSort] = useState([]);
 
   const handleFilter = (e) => {
-    let filter = e.length > 0 ? e.slice(0, 4) : stock;
-    setStock(filter);
+    setStock(e);
   };
 
   const handleSearch = (e) => {
@@ -32,14 +31,21 @@ const Template = ({ data, title, desc }) => {
 
   const headlerLoadMore = (e) => {
     if (showMore) {
+      if (stock.length > 4) {
+        setShowMore(!showMore);
+        setStock(stock.slice(0, 4));
+      } else {
+        let current = sort.length > 0 ? sort : data;
+        setStock(current);
+        setShowMore(!showMore);
+      }
+    } else {
       let current = sort.length > 0 ? sort : data;
       setStock(current);
-    } else {
-      setStock(data.slice(0, 4));
+      setShowMore(!showMore);
     }
-
-    setShowMore(!showMore);
   };
+
   return (
     <div className={styles.container}>
       <div className={styles.desktop}>
@@ -49,6 +55,7 @@ const Template = ({ data, title, desc }) => {
           set={setStock}
           title="Filter"
           mobile={false}
+          stock={stock}
         />
       </div>
 
@@ -57,6 +64,7 @@ const Template = ({ data, title, desc }) => {
           <div className={styles.mobile}>
             <FilterForm
               data={data}
+              stock={stock}
               onFilter={handleFilter}
               set={setStock}
               title="Open Filter"
@@ -73,12 +81,15 @@ const Template = ({ data, title, desc }) => {
         </div>
         <div className={styles.cards_box}>
           {stock.map((x) => (
-            <Card key={x.image} info={x} />
+            <Card key={x.id} info={x} />
           ))}
         </div>
         <div className={styles.btn_box}>
           <Button onClick={headlerLoadMore} css={"load_box"}>
-            {stock.length <= 4 ? "Load More" : "Load Less"}
+            {(!showMore && stock.length === 4) ||
+            (showMore && stock.length === 4)
+              ? "Load More"
+              : "Load Less"}
           </Button>
         </div>
       </div>
